@@ -32,7 +32,12 @@ android {
     buildFeatures {
         viewBinding true
     }
+    packagingOptions {
+        exclude 'META-INF/**'
+
+    }
 }
+
 
 dependencies {
 
@@ -46,7 +51,9 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.0'
 
-    implementation 'org.springframework.boot:spring-boot-starter-web:2.1.1.RELEASE'
+    implementation ('org.springframework.boot:spring-boot-starter-web:2.1.1.RELEASE'){
+        exclude group: 'org.apache.tomcat', module: 'tomcat-annotations-api'
+    }
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

@@ -22,7 +22,7 @@ class HomeFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    private var restTemplate : LLRestTemplate
+//    private var restTemplate : LLRestTemplate
 
 
     override fun onCreateView(
@@ -36,8 +36,8 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        restTemplate = new LLRestTemplate()
-        restTemplate.post()
+//        restTemplate = new LLRestTemplate()
+//        restTemplate.post()
 //        val textView: TextView = binding.textHome
 //        homeViewModel.text.observe(viewLifecycleOwner, Observer {
 //            textView.text = it
